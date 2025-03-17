@@ -5,11 +5,17 @@
  */
 '''
 
-def is_prime (number):
-    numbers = (1,2,3,4,5,6,7,8,9)
-    cont = 0
-    for index in numbers:
-        if((number/index) == 0 or (number/index) == number):
-            cont + 1
-    print('Contador: ', cont)
-is_prime(4)
+def is_prime ():
+
+    for number in range (1, 101):
+        if number>=2:
+            is_divisible = False
+            for index in range(2, number):
+                if number % index == 0:
+                    is_divisible = True
+                    break
+            if not is_divisible:
+                print(number)
+    
+    
+is_prime()
